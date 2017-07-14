@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="TestController.js">
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title></title>
+</head>
+
+<body ng-app="myApp" ng-controller="TestController" class="someStyle">
+  <div>
+    <h3> First select rating and then press submit </h3>
+
+    <button class="col-xs-1" ng-click="set('AAAAA')"> A** </button>
+    <button class="col-xs-1" ng-click="set('AAAA')"> A* </button>
+    <button class="col-xs-1" ng-click="set('AAA')"> A++ </button>
+    <button class="col-xs-1" ng-click="set('AA')"> A+ </button>
+    <button class="col-xs-1" ng-click="set('A')"> A </button>
+    <button class="col-xs-1" ng-click="set('B')"> B </button>
+    <button class="col-xs-1" ng-click="set('C')"> C </button>
+    <button class="col-xs-1" ng-click="set('D')"> D </button>
+
+    <span class="col-xs-1"/>
+      <button type="button" name="button" ng-disabled="!rating.length" ng-click="submit()">Submit</button>
+    <div ng-if="average > 0">
+      <h4> Average amount is {{average}} </h4>
+    </div>
+  </div>
+</body>
+
+</html>
