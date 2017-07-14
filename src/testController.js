@@ -11,7 +11,6 @@ angular.module('myApp', [])
     let result = [];
 
     $scope.submit = () => {
-      console.log("Submit trigered");
       //I have disabled security in the browser to make it work
       $http.get('https://api.zonky.cz/loans/marketplace?rating=' + $scope.rating)
         .then(response => {
